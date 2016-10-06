@@ -8,7 +8,7 @@ package com.ottobots.domain;
 public class Feature {
 
 
-    private int id;
+    private String id;
     private String name;
     private String url;
     private int vote;
@@ -16,18 +16,18 @@ public class Feature {
     public Feature() {
     }
 
-    public Feature(int id, String name, String url, int vote) {
+    public Feature(String id, String name, String url, int vote) {
         this.id = id;
         this.name = name;
         this.url = url;
         this.vote = vote;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

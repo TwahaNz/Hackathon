@@ -23,11 +23,9 @@ public class PeopleFeaturesApplicationTests {
 	@Test
 	public void testDBOperations(){
 		FeatureDAOImpl myFeatureDAO = new FeatureDAOImpl(datasource);
-		myFeatureDAO.downVote(1);
-
+		myFeatureDAO.downVote("WBMS-1800");
 
 		System.out.println(myFeatureDAO.getFeatures().get(0).getVote());
-
 	}
 
 }

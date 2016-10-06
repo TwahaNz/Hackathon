@@ -23,7 +23,7 @@ public class FeatureDAOImpl implements FeatureDAO {
     }
 
     @Override
-    public void upVote(int id) {
+    public void upVote(String id) {
 
        // String updateString= String.format("UPDATE FEATURE SET VOTES = VOTES +1 WHERE id = %d", id);
        // jdbcTemplate.execute(updateString);
@@ -31,7 +31,7 @@ public class FeatureDAOImpl implements FeatureDAO {
     }
 
     @Override
-    public void downVote(int id) {
+    public void downVote(String id) {
         //String updateString= String.format("UPDATE FEATURE SET VOTES = VOTES -1 WHERE id = %d", id);
         // jdbcTemplate.execute(updateString);
 
@@ -48,7 +48,7 @@ public class FeatureDAOImpl implements FeatureDAO {
                     public Feature mapRow(ResultSet resultSet, int i) throws SQLException {
 
                         Feature feature = new Feature();
-                        feature.setId(resultSet.getInt("ID"));
+                        feature.setId(resultSet.getString("ID"));
                         feature.setName(resultSet.getString("Name"));
                         feature.setUrl(resultSet.getString("Url"));
                         feature.setVote(resultSet.getInt("Votes"));

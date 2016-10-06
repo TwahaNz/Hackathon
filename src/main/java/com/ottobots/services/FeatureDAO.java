@@ -8,7 +8,8 @@ import java.util.List;
  * Created by nzetwa01 on 10/6/2016.
  */
 public interface FeatureDAO {
-    void upVote(int id);
-    void downVote(int id);
+    void upVote(String id);
+    void downVote(String id);
+
     List<Feature> getFeatures();
 }
