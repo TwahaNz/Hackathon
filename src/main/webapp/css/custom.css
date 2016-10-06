@@ -1,6 +1,6 @@
 .altered-container 	{
-	margin-left:200px!important;
-	margin-right:200px!important;
+	margin-left:100px!important;
+	margin-right:100px!important;
 }
 
 .altered-menu 	{
@@ -167,6 +167,10 @@ table{
 	border: 1px solid black;
 	table-layout: fixed;
 	width: 200px;
+}
+
+.column-width-vote-buttons {
+	width: 100px!important;
 }
 
 .table-width {

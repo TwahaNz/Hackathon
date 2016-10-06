@@ -12,8 +12,10 @@
 <head>
     <title>People Features!</title>
     <link href="../../css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-static-top remove-margin-bottom">
@@ -39,7 +41,7 @@
     </div>
 </div--%>
 
-<div class="container-fluid spaces-bottom">
+<div class="container-fluid altered-container spaces-bottom">
     <div align="center">
         <table class="table table-bordered table-width">
             <tbody>
@@ -48,15 +50,17 @@
             <c:if test="${not empty features}">
                 <c:forEach var="feature" items="${features}">
                     <tr>
-                        <td>
-                            <form method="POST" action="/upvote/${feature.id}">
-                                <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up" type="submit"></button>                           
-                            </form>
-                            <br/>
-                            <br/>
-                            <form method="POST" action="/downvote/${feature.id}">
-                                <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
-                            </form>
+                        <td class="column-width column-width-vote-buttons">
+                            <div align="center" class="votes-buttons">
+                                <form method="POST" action="/upvote/${feature.id}">
+                                    <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"
+                                            type="submit"></button>
+                                </form>
+                                <br class="spaces-bottom" />
+                                <form method="POST" action="/downvote/${feature.id}">
+                                    <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
+                                </form>
+                            </div>
                         </td>
                         <td>
                             <div align="center" class="spaces-top"><h2 class="page-header spaces-top">${feature.id}
@@ -77,6 +81,8 @@
         <hr/>
     </div>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
