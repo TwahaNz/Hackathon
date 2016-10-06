@@ -11,9 +11,9 @@
 <html>
 <head>
     <title>$Title$</title>
-    <link href="css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-static-top remove-margin-bottom">
@@ -32,21 +32,38 @@
 </nav>
 ';
 
-<div class="spaces-bottom">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-        </tr>
-        </tbody>
-    </table>
+<%--<div class="container">
+    <div class="jumbotron">
+        <h1>Features</h1>
+        <p>Anonymously Vote For Your Features. Go Ahead..</p>
+    </div>
+</div--%>
+
+<div class="container spaces-bottom">
+    <div align="center">
+        <table class="table table-bordered table-width">
+            <tbody>
+            <%for (int i = 0; i < 10; i++) {%>
+            <tr>
+                <td>
+                    <div align="center" class="spaces-top"><h3 class="page-header spaces-top">Build-Pipeline View</h3>
+                    </div>
+                    <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"></button>
+                    <br/>
+                    <br/>
+                    <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
+                </td>
+                <div align="center" class="spaces-top">
+                    <td class="column-width page-header">
+                        <div align="center"><h4>Number Of Votes</h4></div>
+                    </td>
+                </div>
+                <% }%>
+            </tr>
+            </tbody>
+        </table>
+        <hr/>
+    </div>
 </div>
 
 </body>
