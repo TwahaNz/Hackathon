@@ -1,6 +1,6 @@
 CREATE TABLE Feature
 (
- ID INT NOT NULL AUTO_INCREMENT,
+ ID VARCHAR (255),
  Name varchar(255),
  URL varchar(255),
  Votes INT,
