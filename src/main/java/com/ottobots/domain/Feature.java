@@ -13,6 +13,9 @@ public class Feature {
     private String url;
     private int vote;
 
+    public Feature() {
+    }
+
     public Feature(int id, String name, String url, int vote) {
         this.id = id;
         this.name = name;
