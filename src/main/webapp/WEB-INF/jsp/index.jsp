@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>People Features!</title>
     <link href="../../css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -43,23 +43,31 @@
     <div align="center">
         <table class="table table-bordered table-width">
             <tbody>
-            <%for (int i = 0; i < 10; i++) {%>
-            <tr>
-                <td>
-                    <div align="center" class="spaces-top"><h3 class="page-header spaces-top">Build-Pipeline View</h3>
-                    </div>
-                    <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"></button>
-                    <br/>
-                    <br/>
-                    <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
-                </td>
-                <div align="center" class="spaces-top">
-                    <td class="column-width page-header">
-                        <div align="center"><h4>Number Of Votes</h4></div>
-                    </td>
-                </div>
-                <% }%>
-            </tr>
+            <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+            <c:if test="${not empty features}">
+                <c:forEach var="feature" items="${features}">
+
+                    <tr>
+                        <td>
+                            <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"></button>
+                            <br/>
+                            <br/>
+                            <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
+                        </td>
+                        <td>
+                            <div align="center" class="spaces-top"><h2 class="page-header spaces-top">${feature.id} - ${feature.name}</h2>
+                            </div>
+                        </td>
+                        <div align="center" class="spaces-top">
+                            <td class="column-width page-header">
+                                <div align="center"><h1>Votes</h1></div>
+                                <div align="center"><h1 class="fonts move-up">${feature.vote}</h1></div>
+                            </td>
+                        </div>
+                    </tr>
+                </c:forEach>
+            </c:if>
             </tbody>
         </table>
         <hr/>

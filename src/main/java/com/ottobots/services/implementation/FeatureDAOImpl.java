@@ -5,6 +5,7 @@ import com.ottobots.services.FeatureDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
@@ -14,6 +15,8 @@ import java.util.List;
 /**
  * Created by nzetwa01 on 10/6/2016.
  */
+
+@Component
 public class FeatureDAOImpl implements FeatureDAO {
     @Autowired
     JdbcTemplate jdbcTemplate;
