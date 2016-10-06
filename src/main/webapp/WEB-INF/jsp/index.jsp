@@ -63,7 +63,8 @@
                             </div>
                         </td>
                         <td>
-                            <div align="center" class="spaces-top"><h2 class="page-header spaces-top">${feature.id}
+                            <div align="center" class="spaces-top"><h2 class="page-header spaces-top">
+                                    <a href="${feature.url}">${feature.id}</a>
                                 - ${feature.name}</h2>
                             </div>
                         </td>
