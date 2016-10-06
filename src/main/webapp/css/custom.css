@@ -1,6 +1,6 @@
 .altered-container 	{
-	margin-left:10px!important;
-	margin-right:10px!important;
+	margin-left:200px!important;
+	margin-right:200px!important;
 }
 
 .altered-menu 	{
@@ -61,9 +61,7 @@
 }
 
 .fonts {
-	font-size:60px;
-	margin-bottom:0px!important;
-	padding-bottom:0px!important;
+	font-size:80px;
 	background-color:rgba(238, 238, 238, 0)!important;
 }
 
@@ -177,4 +175,12 @@ table{
 
 .move-up {
 	padding-bottom: 20px;
+}
+
+.column-width-buttons {
+	width: 100px;
+}
+
+.votes-buttons {
+	margin-top: 30%!important;
 }

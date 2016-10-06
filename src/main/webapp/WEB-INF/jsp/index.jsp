@@ -39,7 +39,7 @@
     </div>
 </div--%>
 
-<div class="container spaces-bottom">
+<div class="container-fluid spaces-bottom">
     <div align="center">
         <table class="table table-bordered table-width">
             <tbody>
@@ -47,22 +47,24 @@
 
             <c:if test="${not empty features}">
                 <c:forEach var="feature" items="${features}">
-
                     <tr>
-                        <td>
-                            <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"></button>
-                            <br/>
-                            <br/>
-                            <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
+                        <td class="column-width-buttons">
+                            <div align="center" class="votes-buttons">
+                                <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"></button>
+                                <br/>
+                                <br/>
+                                <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
+                            </div>
                         </td>
                         <td>
-                            <div align="center" class="spaces-top"><h2 class="page-header spaces-top">${feature.id} - ${feature.name}</h2>
+                            <div align="center" class="spaces-top"><h2 class="page-header spaces-top">${feature.id}
+                                - ${feature.name}</h2>
                             </div>
                         </td>
                         <div align="center" class="spaces-top">
                             <td class="column-width page-header">
-                                <div align="center"><h1>Votes</h1></div>
-                                <div align="center"><h1 class="fonts move-up">${feature.vote}</h1></div>
+                                <div align="center"><h1 class="spaces-top">Votes</h1></div>
+                                <div align="center"><h1 class="fonts">${feature.vote}</h1></div>
                             </td>
                         </div>
                     </tr>
