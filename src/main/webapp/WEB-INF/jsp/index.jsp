@@ -48,13 +48,15 @@
             <c:if test="${not empty features}">
                 <c:forEach var="feature" items="${features}">
                     <tr>
-                        <td class="column-width-buttons">
-                            <div align="center" class="votes-buttons">
-                                <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up"></button>
-                                <br/>
-                                <br/>
+                        <td>
+                            <form method="POST" action="/upvote/${feature.id}">
+                                <button class="btn btn-success btn-lg glyphicon glyphicon-chevron-up" type="submit"></button>                           
+                            </form>
+                            <br/>
+                            <br/>
+                            <form method="POST" action="/downvote/${feature.id}">
                                 <button class="btn btn-danger btn-lg glyphicon glyphicon-chevron-down"></button>
-                            </div>
+                            </form>
                         </td>
                         <td>
                             <div align="center" class="spaces-top"><h2 class="page-header spaces-top">${feature.id}

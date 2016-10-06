@@ -44,9 +44,7 @@ public class FeatureDAOImpl implements FeatureDAO {
     @Override
     public List<Feature> getFeatures() {
 
-
-        String getString = String.format("SELECT id, name, url, votes FROM FEATURE");
-        return jdbcTemplate.query("SELECT * FROM FEATURE", new RowMapper<Feature>() {
+        return jdbcTemplate.query("SELECT * FROM FEATURE ORDER BY votes DESC", new RowMapper<Feature>() {
                     @Override
                     public Feature mapRow(ResultSet resultSet, int i) throws SQLException {
 
