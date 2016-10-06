@@ -43,6 +43,7 @@
 
 <div class="container-fluid altered-container spaces-bottom">
     <div align="center">
+        <% response.setIntHeader("Refresh" , 5); %>
         <table class="table table-bordered table-width">
             <tbody>
             <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

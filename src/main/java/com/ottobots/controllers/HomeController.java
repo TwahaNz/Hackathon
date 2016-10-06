@@ -19,7 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author shiraaz.moollatjie
  */
 @Controller
-@RequestMapping("")
+@RequestMapping(value = {"","/"})
 public class HomeController {
 
     @Autowired
